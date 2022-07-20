@@ -24,7 +24,7 @@ public class ConcurrencyQueueImpl<T> implements ConcurrencyQueue<T> {
                 // wait for consumer to consume the message
                 System.out.println("Queue is Full ="+ queue +" , Waiting by Thread = "+ Thread.currentThread().getId());
                 wait();
-                
+
             }
             if (queue.size() == 0) {
                 System.out.println("Queue was Empty , Notify all the threads");
